@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fancy-Weather</title>
+  <link rel="stylesheet" href="./src/assets/styles/style.css">
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.css' rel='stylesheet' />
+    <link
+rel="stylesheet"
+href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css"
+type="text/css"
+/>
+  </head>
+<body>
+  <main class="wrapper" id="wrapper__back">
+    <div class="controls">
+      <div class="controls--buttons">
+        <div class="controls--buttons-lang activeLng btn_rus">ru</div>
+        <div class="controls--buttons-lang btn_blr">by</div>
+        <div class="controls--buttons-lang btn_eng">en</div>
+        <div class="controls--buttons-degrees activeDgr btn_cls">°C</div>
+        <div class="controls--buttons-degrees btn_frg">°F</div>
+        <div class="controls--buttons-background btn_back">
+          <img src="./src/assets/images/updated.svg" alt="UPD">
+        </div>
+      </div>
+      <div class="controls--search">
+        <div id="geocoder" class="geocoder controls--search-query"></div>
+      </div>
+    </div>
+    <div class="weather">
+      <div class="what__today">
+        <div class="what__today--place"></div>
+        <div class="what__today--day">
+          <div class="what__today--day-date"></div>
+          <div class="what__today--day-time"></div>
+        </div>
+        <div class="what__today--feels">
+          <div class="what__today--feels-temp__now"></div>
+          <div class="temp__cover">
+            <div class="what__today--feels-describe"></div>
+            <div class="what__today--feels-img today_img"></div>
+          </div>
+        </div>
+      </div>
+      <div class="what__there">
+        <div class="what__there--one">
+          <div class="what__there--one-temp"></div>
+          <div class="what__there--one-day"></div>
+          <div class="what__there--one-img"></div>
+        </div>
+        <div class="what__there--two">
+          <div class="what__there--two-temp"></div>
+          <div class="what__there--two-day"></div>
+          <div class="what__there--two-img"></div>
+        </div>
+        <div class="what__there--three">
+          <div class="what__there--three-temp"></div>
+          <div class="what__there--three-day"></div>
+          <div class="what__there--three-img"></div>
+        </div>
+      </div>
+    </div>
+    <div class="locate__me">
+      <div class="locate__me--map">
+        <div id='map'></div>
+      </div>
+      <div class="locate__me--coordinates">
+        <div class="locate__me--coordinates-lati"></div>
+        <div class="locate__me--coordinates-long"></div>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="./js/index.js"></script>
+</html>
